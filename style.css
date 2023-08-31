@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&family=Kanit:wght@300&family=Open+Sans&display=swap');
+
+:root{
+    --t1-bg : hsl(222, 26%, 31%);
+    --t1-tg-keypad-bg : hsl(223, 31%, 20%);
+    --t1-screen-bg : hsl(224, 36%, 15%);
+    --t1-db-key-bg : hsl(225, 21%, 49%);
+    --t1-db-key-bg-light : hsl(225, 40%, 71%);
+    --t1-db-key-sdw: hsl(224, 28%, 35%);
+    --t1-red-key-bg : hsl(6, 63%, 50%);
+    --t1-red-key-bg-light : hsl(6, 61%, 64%);
+    --t1-red-key-sdw : hsl(6, 70%, 34%);
+    --t1-gr-key-bg : hsl(30, 25%, 89%);
+    --t1-gr-key-sdw : hsl(28, 16%, 65%);
+    --t1-txt-blue : hsl(221, 14%, 31%);
+    --t1-txt-white : hsl(0, 0%, 100%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+html, body{
+    margin: 0;
+    padding: 0;
+    background-color: var(--t1-bg);
+}
+
+/*all CSS*/
+.main-wrapper {
+    max-width: fit-content;
+    margin: auto;
+    padding: 7% 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+/*radio button color*/
+.theme-option-select input[type="radio"]#theme1{
+    --radio-color : hsl(6, 63%, 50%);    
+}
+.theme-option-select input[type="radio"]#theme2{
+    --radio-color : hsl(25, 98%, 40%);
+}
+.theme-option-select input[type="radio"]#theme3{
+    --radio-color : hsl(176, 100%, 44%);
+}
+
+/*theme selector*/
+.theme-selector {
+    display: flex;
+    justify-content: space-between;
+}
+.heading h1{
+    color: var(--other-text);
+    font-size: 25px;
+}
+fieldset.theme-option {
+    display: flex;
+    align-items: flex-end;
+    border: none;
+}
+.theme-option-wrapper {
+    display: flex;
+    position: relative;
+}
+.theme-option-wrapper::after {
+    content: " ";
+    background-color: var(--t1-tg-keypad-bg);
+    width: 100%;
+    height: 60%;
+    top: 55%;
+    left: -7%;
+    position: absolute;
+    border-radius: 10px;
+    padding: 0px 5px;
+}
+.theme-option-select {
+    display: flex;
+    flex-direction: column;
+    margin: 0 5px;
+    z-index: 100;
+}
+.theme-option-select label {
+    margin-bottom: 10px;
+    color: var(--other-text);
+    font-weight: 600;
+}
+fieldset.theme-option legend {
+    color: var(--other-text);
+    font-size: 12px;
+    font-weight: 600;
+    margin-right: 15px;
+}
+input[type="radio"]{
+    appearance: none;
+}
+input[type="radio"]:checked{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--radio-color);
+}
+
+
+
+
+
+/*Output Screen*/
+/*.output-screen-container{
+    background-color: var(--t1-screen-bg);
+    padding: 35px 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+    text-align: right;
+    color: var(--other-text);
+    font-size: 40px;
+    font-weight: 600;
+}*/
+
+.output-screen-container input#output-screen{
+    background-color: var(--t1-screen-bg);
+    padding: 35px 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+    text-align: right;
+    color: var(--other-text);
+    font-size: 40px;
+    font-weight: 600;
+    box-sizing: border-box;
+    border: none;
+}
+
+.output-screen-container input#output-screen:focus-visible{
+    border: none;
+    outline: none;
+}
+
+
+
+
+/*keypad*/
+.keypad-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 1.2rem;
+}
+.colspan {
+    grid-column: span 2;
+}
+.keypad-wrapper {
+    padding: 20px;
+    background-color: var(--t1-tg-keypad-bg);
+    border-radius: 10px;
+}
+.key {
+    padding: 15px 30px;
+    text-align: center;
+    border-radius: 7px;
+    font-size: 25px;
+    font-weight: 600;
+    border: none;
+}
+.digit-key{
+    background-color: var(--t1-gr-key-bg);
+    box-shadow: 0 4px 0 var(--t1-gr-key-sdw);
+    color: var(--t1-txt-blue);
+}
+.digit-key:hover{
+    background-color: var(--keys-hover);
+}
+.gray-key{
+    background-color: var(--t1-db-key-bg);
+    box-shadow: 0 4px 0 var(--t1-db-key-sdw);
+    color: var(--t1-txt-white);
+}
+.gray-key:hover{
+    background-color: var(--t1-db-key-bg-light);
+}
+.red-key{
+    background-color: var(--t1-red-key-bg);
+    box-shadow: 0 4px 0 var(--t1-red-key-sdw);
+    color: var(--t1-txt-white);
+}
+.red-key:hover{
+    background-color: var(--t1-red-key-bg-light);
+}
+
+/*theme 1 variables*/
+
+:root:has(#theme1:checked){
+
+    --t1-bg : hsl(222, 26%, 31%);
+    --t1-tg-keypad-bg : hsl(223, 31%, 20%);
+    --t1-screen-bg : hsl(224, 36%, 15%);
+    --t1-db-key-bg : hsl(225, 21%, 49%);
+    --t1-db-key-bg-light : hsl(225, 40%, 71%);
+    --t1-db-key-sdw: hsl(224, 28%, 35%);
+    --t1-red-key-bg : hsl(6, 63%, 50%);
+    --t1-red-key-bg-light : hsl(6, 61%, 64%);
+    --t1-red-key-sdw : hsl(6, 70%, 34%);
+    --t1-gr-key-bg : hsl(30, 25%, 89%);
+    --t1-gr-key-sdw : hsl(28, 16%, 65%);
+    --t1-txt-blue : hsl(221, 14%, 31%);
+    --t1-txt-white : hsl(0, 0%, 100%);
+    --other-text : hsl(0, 0%, 100%);
+    --keys-hover : hsl(0, 0%, 100%) ;
+
+}
+
+:root:has(#theme2:checked){
+    --t1-bg : hsl(0, 0%, 90%);
+    --t1-tg-keypad-bg : hsl(0, 5%, 81%);
+    --t1-screen-bg : hsl(0, 0%, 93%);
+    --t1-db-key-bg : hsl(185, 42%, 37%);
+    --t1-db-key-bg-light : hsl(185, 62%, 68%);
+    --t1-db-key-sdw: hsl(185, 58%, 25%);
+    --t1-red-key-bg : hsl(25, 98%, 40%);
+    --t1-red-key-bg-light : hsl(25, 81%, 55%);
+    --t1-red-key-sdw : hsl(25, 99%, 27%);
+    --t1-gr-key-bg : hsl(45, 7%, 89%);
+    --t1-gr-key-sdw : hsl(35, 11%, 61%);
+    --t1-txt-blue : hsl(60, 10%, 19%);
+    --t1-txt-white : hsl(0, 0%, 100%);
+    --other-text : hsl(60, 10%, 19%);
+    --keys-hover : hsl(0, 0%, 100%) ;
+}
+
+:root:has(#theme3:checked){
+    --t1-bg : hsl(268, 75%, 9%);
+    --t1-tg-keypad-bg : hsl(268, 71%, 12%);
+    --t1-screen-bg : hsl(268, 71%, 12%);
+    --t1-db-key-bg : hsl(281, 89%, 26%);
+    --t1-db-key-bg-light : hsl(281, 88%, 44%);
+    --t1-db-key-sdw: hsl(285, 91%, 52%);
+    --t1-red-key-bg : hsl(176, 100%, 44%);
+    --t1-red-key-bg-light : hsl(176, 87%, 69%);
+    --t1-red-key-sdw : hsl(177, 92%, 70%);
+    --t1-gr-key-bg : hsl(268, 47%, 21%);
+    --t1-gr-key-sdw : hsl(290, 70%, 36%);
+    --t1-txt-blue : hsl(52, 100%, 62%);
+    --t1-txt-white : hsl(0, 0%, 100%);
+    --other-text : hsl(52, 100%, 62%);
+    --keys-hover : hsl(268, 97%, 36%);
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Calculator app</title>  
+</head>
+<body>
+
+  <div class="main-wrapper">
+
+    <!--theme contoller-->
+    <div class="theme-selector">
+      <div class="heading">
+        <h1>calc</h1>
+      </div>
+      <div>
+        <form action="">
+          <fieldset class="theme-option">
+
+            <div >
+              <legend >THEME</legend>
+            </div>
+            
+            <div class="theme-option-wrapper">
+              <div class="theme-option-select">
+                <label for="theme1">1</label>
+                <input type="radio" name="theme" id="theme1">
+              </div>
+    
+              <div class="theme-option-select">
+                <label for="theme2">2</label>
+                <input type="radio" name="theme" id="theme2">
+              </div>
+    
+              <div class="theme-option-select">
+                <label for="theme3">3</label>
+                <input type="radio" name="theme" id="theme3">
+              </div>
+            </div> 
+
+          </fieldset>
+        </form>
+      </div>
+    </div>
+
+    <!--output screen-->
+    <div class="output-screen-container">
+      <form>
+        <input type="text" maxlength="10" value="000" id="output-screen" readonly>
+      </form>
+      <!--<div id="output-screen">000</div>-->
+    </div>
+
+    <!--keypad-->
+    <div class="keypad-wrapper">
+      <div class="keypad-container">
+        <button class="key digit-key num-key"  >7</button>
+        <button class="key digit-key num-key" >8</button>
+        <button class="key digit-key num-key"  >9</button>
+        <button class="key gray-key del-key"  >DEL</button>
+        <button class="key digit-key num-key"  >4</button>
+        <button class="key digit-key num-key"  >5</button>
+        <button class="key digit-key num-key"  >6</button>
+        <button class="key digit-key op-key"  >+</button>
+        <button class="key digit-key num-key"  >1</button>
+        <button class="key digit-key num-key"  >2</button>
+        <button class="key digit-key num-key"  >3</button>
+        <button class="key digit-key op-key"  >-</button>
+        <button class="key digit-key num-key"  >.</button>
+        <button class="key digit-key num-key"  >0</button>
+        <button class="key digit-key op-key"  >/</button>
+        <button class="key digit-key op-key"  >*</button>
+        <button class="key gray-key colspan reset-key"  >RESET</button>
+        <button class="key red-key colspan eq-key"  >=</button>
+      </div>
+    </div>
+  </div>
+  
+
+  <script src="main.js"></script>
+</body>
+</html>
