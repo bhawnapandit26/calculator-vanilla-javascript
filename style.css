@@ -35,7 +35,7 @@ html, body{
     padding: 7% 0;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
+    /*flex-wrap: wrap;*/
 }
 
 /*radio button color*/
@@ -132,6 +132,7 @@ input[type="radio"]:checked{
     font-weight: 600;
     box-sizing: border-box;
     border: none;
+    width: 100%;
 }
 
 .output-screen-container input#output-screen:focus-visible{
@@ -245,4 +246,16 @@ input[type="radio"]:checked{
     --t1-txt-white : hsl(0, 0%, 100%);
     --other-text : hsl(52, 100%, 62%);
     --keys-hover : hsl(268, 97%, 36%);
+}
+
+/*RESPONSIVE*/
+
+@media screen and  (max-width : 500px) {
+    .key{
+        padding: 10px 17px;
+    }
+    .main-wrapper {
+        padding: 7% 5%;
+    }
+    
 }
