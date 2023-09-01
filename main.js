@@ -22,6 +22,10 @@ function retriveTheme() {
         {
             theme.checked = true;
         }
+        else
+        {
+            document.getElementById("theme1").checked;
+        }
     })
 }
 
