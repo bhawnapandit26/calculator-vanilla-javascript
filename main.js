@@ -22,8 +22,7 @@ function retriveTheme() {
         {
             theme.checked = true;
         }
-        else
-        {
+        else{
             document.getElementById("theme1").checked;
         }
     })
@@ -57,7 +56,18 @@ button.forEach((btn)=>{
         }
 
         if(btn.classList.contains('eq-key')){
-            outputScreen.value = parseFloat(eval(result.join(''))).toFixed(2);
+            if(result.length == 0)
+            {
+                outputScreen.value = "0"
+            }
+            else
+            {
+                let tempResult = parseFloat(eval(result.join(''))).toFixed(2);
+                outputScreen.value = parseFloat(eval(result.join(''))).toFixed(2);
+                result = [''];
+                result.push(tempResult);
+            }
+            
 
 
         }
